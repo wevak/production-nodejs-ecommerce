@@ -155,7 +155,7 @@ export const getUserProfileController = async (req, res) => {
   try {
     // debugger;
     const user = await userModel.findById(req.user._id);
-    user.password = undefined;
+    // user.password = undefined;
     res.status(200).send({
       success: true,
       message: "User profile fetched successfully",
